@@ -1,0 +1,22 @@
+1. How do you used to submit Spark Jobs?
+
+2. Can you write Spark-Submit command?
+
+3. What was used as master ? 
+Ans -  Yarn
+
+4. How many executors did you use?
+
+5. How many cores per executor?
+
+6. What was the driver memory and executor memory?
+
+7. Any other configuration ? --conf ? Or Any other files passed ? 
+
+8. What optimization techniques did you use? Eg -  Caching, multithreading, broadcast, coalesce, partitioning ? 
+
+9. Do you know shuffle partitioning? 
+
+10. Was AQE enabled ?  Adaptive query execution ? - default enabled in Spark-3.
+
+11. What was average file sizes handled daily?  and total data size daily loads? 
