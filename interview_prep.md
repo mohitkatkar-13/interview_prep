@@ -1455,13 +1455,24 @@ where t1.TeamName <> t2.TeamName;
 
 ***
 2. **Client vs Cluster mode in Spark**
+- In client mode the Spark Driver / Application master is created on edge node or on local system while the executors are created on worker nodes.
+- In Cluster mode the Spark driver as well as executors are created on worker nodes of the cluster.  
 
 ***
-3. **what is Dag?**
+3. **what is Dag in Spark?**
+- In spark DAG is a graph of computation stages where :
+    - Nodes represent rdd's (or DataFrame/DataSet) and the operations applied.
+    - Edges represent data flow or dependencies between those operations. 
 
+- When you perform transformation or operations on RDD's or DF it does not compute it directly first it creates a logical plan
+ that is DAG, this helps Spark internaly optimize and schedule operations accordingly. 
+
+- DAG is a logical plan Spark builds before execution. 
 ***
 4. **What is Lazy Evaluation?**
+- Spark does not execute the transformations on RDD or DF immediately, instead internally a plan is created (DAG). The execution is triggered only when an action is called. This is called Lazy evaluaation.
 
+- This helps Spark to optimize the queries internally.  
 
 ***
 5. **3rd Highest Salary in dept**
@@ -1527,12 +1538,23 @@ LOAD DATA INPATH '/path/in/hdfs/employee.csv' INTO TABLE employee;
 
 ***
 10. **Make the given data of marks in diffrent lines**
-
-```SQL
+```
 Student_name marks
 Ashok 87,92,76,89
 ```
+```sql
+select student_name, cs.Value
+from table
+cross apply STRING_SPLIT(marks,",") cs
+```
 
 ```python
-
+spark.sql("""select student_name, explode(split(marks,",")) as mark from table""")
 ```
+```python 
+df.select("*",explode('marks').alias('mark'))
+```
+
+***
+11. **Difference between map() and flatmap()?**
+- 
