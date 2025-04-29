@@ -1,0 +1,1 @@
+“I worked on optimizing a data pipeline for processing clickstream data using PySpark on Databricks. The goal was to sessionize user activity and calculate session-based metrics for business insights. I reduced the processing time from 1 hour 45 minutes to 1 hour, ensuring that the system could handle higher loads with the same cluster configuration.”
