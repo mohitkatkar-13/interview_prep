@@ -1558,3 +1558,15 @@ df.select("*",explode('marks').alias('mark'))
 ***
 11. **Difference between map() and flatmap()?**
 - 
+
+12.  **How is the query flow in SQL what is read first and last?**
+- Is as follows - 
+    - FROM
+    - JOIN 
+    - WHERE
+    - GROUP BY 
+    - HAVING
+    - SELECT
+    - DISTINCT
+    - ORDER BY 
+    - LIMIT

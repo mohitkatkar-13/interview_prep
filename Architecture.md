@@ -29,5 +29,3 @@ Processed/curated: Hive  , Terdata
 
 CI/CD for pipelines: BitBucket, Jenkins, JFrog Atrifactory 
 
-
-

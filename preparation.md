@@ -1,0 +1,6 @@
+- Python
+- SQL
+- Pyspark
+- Azure / AWS
+- Revise Theory Pyspark/Python/DataModelling/Hive
+- Apply Jobs
