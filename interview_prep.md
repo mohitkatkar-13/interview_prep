@@ -1570,3 +1570,23 @@ df.select("*",explode('marks').alias('mark'))
     - DISTINCT
     - ORDER BY 
     - LIMIT
+
+
+# LTI MINDTREE
+
+1. **Project Architecture**
+
+***
+2. **Pyspark query to find the Total time in office login and logout time in timestamp (YYYY-MM-DD HH:mm:ss.SSS)**
+
+- emp_id, login_time, logout_time
+```python
+df.withColumn('total_time', (unix_timestamp(col('logout_time'))-unix_timestamp(col('login_time')))/60)
+```
+
+***
+3. **What is ceil and floor of 344.54?**
+- Ceil : 345
+- Floor : 344
+
+***
