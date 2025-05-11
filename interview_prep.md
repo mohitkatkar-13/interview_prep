@@ -1590,3 +1590,53 @@ df.withColumn('total_time', (unix_timestamp(col('logout_time'))-unix_timestamp(c
 - Floor : 344
 
 ***
+
+# Eucloid
+
+1. **What is indexing in SQL?**
+- 
+
+***
+2. **What is diffference between delete and truncate?**
+- 
+
+***
+3. **Python generators and decorators**
+-
+
+***
+4. **Result of each join on following tables.**
+```
+tableA  | tableB    |
+id      | id        |
+1       | 1         |
+1       | 1         |
+1       | 1         |
+1       | null      |
+1       |           |
+null    |           |
+null    |           |
+
+inner join - 15
+full outer join - 18
+left join - 17
+right join - 16
+```
+
+***
+5. **SQL query - Remove the duplicates and give optimised result.**
+```sql
+table city_distance
+city1, city2, distance
+delhi, banglore, 100
+banglore, delhi, 100
+delhi, chennai, 200
+chennai, delhi, 200
+delhi, pune, 300
+
+select distinct greatest(city1,city2) as city1,
+least(city1,city2) as city2,
+distance
+from city_distance;
+```
+
